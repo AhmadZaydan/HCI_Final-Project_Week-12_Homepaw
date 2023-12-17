@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#nav-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+
+#nav-bar ul li a {
+  text-align: center;
+  margin: 3px;
+  color: #fff;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+#nav-bar ul li a:hover {
+  background-color: rgb(133, 215, 175);
+  border-radius: 10px;
+  color: rgb(38, 38, 38);
+}
+
+#nav-bar ul .loginBorder {
+  border-style: solid !important;
+  border-radius: 10px;
+  border-color: #fff;
+}
+
+#navbar .navbar-toggler {
+  border-color: #fff;
+}
+
+.navbar-brand img {
+  height: 50px;
+  max-width: 90px;
+  padding-left: 20px;
+}
+
+.banner {
+  position: relative;
+  width: auto;
+  min-height: 100vh;
+  background-image: linear-gradient(
+      rgba(76, 242, 101, 0.5),
+      rgba(76, 242, 101, 0.5)
+    ),
+    url(imgs/new_BG.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner .content {
+  max-width: 900px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(21, 144, 103);
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.banner .content h2 {
+  font-size: 5em;
+  color: #fff;
+}
+
+.banner .content p {
+  font-size: 20px;
+  color: #fff;
+}
+
+/* about */
+#about {
+  padding: 50px 0;
+  color: #555;
+  width: 100%;
+  min-height: 80vh;
+}
+
+#about .container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#about .container .about-font {
+  font-size: 20px !important;
+}
+
+#about .imgbox img {
+  max-width: 900px !important;
+  margin-top: 550px !important;
+  padding-left: 50px;
+  margin-bottom: 100px;
+}
+
+/* adopt */
+.adopt-banner {
+  position: relative;
+  width: auto;
+  min-height: 100vh;
+  background-image: linear-gradient(
+      rgba(57, 57, 57, 0.5),
+      rgba(57, 57, 57, 0.5)
+    ),
+    url(imgs/Animal/dog2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adopt-banner .content {
+  max-width: 900px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.adopt-banner .content h2 {
+  font-size: 5em;
+  color: #fff;
+}
+
+.adopt-banner .content p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.adopt-banner .content a {
+  max-width: 300px;
+}
+
+/* for-adoption */
+.put-banner {
+  position: relative;
+  width: auto;
+  min-height: 100vh;
+  background-image: linear-gradient(
+      rgba(57, 57, 57, 0.5),
+      rgba(57, 57, 57, 0.5)
+    ),
+    url(imgs/Animal/cat-dog.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.put-banner .content {
+  max-width: 900px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.put-banner .content h2 {
+  font-size: 5em;
+  color: #fff;
+}
+
+.put-banner .content p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.put-banner .content a {
+  max-width: 300px;
+}
+
+@media only screen and (max-width: 991px) {
+  #about .imgbox img {
+    max-width: 500px;
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* home */
+  .banner .content {
+    position: relative;
+    max-width: 300px;
+    padding: 20px;
+  }
+
+  .banner .content h2 {
+    position: relative;
+    font-size: 40px;
+  }
+
+  .banner .content p {
+    font-size: 16px;
+  }
+
+  /* adopt */
+  .adopt-banner .content {
+    position: relative;
+    max-width: 400px;
+    padding: 10px;
+  }
+
+  .adopt-banner .content h2 {
+    position: relative;
+    font-size: 40px;
+  }
+
+  .adopt-banner .content p {
+    font-size: 16px;
+  }
+
+  /* put */
+  .put-banner .content {
+    position: relative;
+    max-width: 400px;
+    padding: 10px;
+  }
+
+  .put-banner .content h2 {
+    position: relative;
+    font-size: 40px;
+  }
+
+  .put-banner .content p {
+    font-size: 16px;
+  }
+}
+
+.footer {
+  overflow: hidden;
+  background: #159067;
+  color: #ffffff;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+small {
+  font-size: calc(12px + (15 - 12) * ((100vw - 360px) / (1600 - 360)));
+}
+
+.bold-text {
+  color: #ffffff;
+}
+
+.mt-55 {
+  margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360)));
+}
+
+h3 {
+  font-size: calc(34px + (40 - 34) * ((100vw - 360px) / (1600 - 360)));
+}
+
+.social {
+  font-size: 21px !important;
+}
+
+.rights {
+  font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360)));
+}
+
+.footer .col-11 {
+  width: 100%;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer .col-11 {
+    width: 100%;
+  }
+
+  .footer .row {
+    justify-content: center;
+  }
+
+  .footer .col-xl-8,
+  .footer .col-xl-4,
+  .footer .col-md-4,
+  .footer .col-md-8,
+  .footer .col-sm-4,
+  .footer .col-sm-8,
+  .footer .col-12 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 1149px) {
+  #about .img-fluid {
+    margin-top: 150px !important;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  #about .img-fluid {
+    margin-top: 300px !important;
+    max-width: 350px !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #about .img-fluid {
+    margin-top: 0 !important;
+    max-width: 100% !important;
+  }
+}

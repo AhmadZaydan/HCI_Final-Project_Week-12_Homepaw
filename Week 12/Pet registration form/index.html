@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <form
+        id="contact-form"
+        action="../mainPage.html"
+        method="get"
+        enctype="multipart/form-data"
+      >
+        <h1>Pet Registration Form</h1>
+        <label class="title">Owner Information</label>
+        <label>Owner Name:</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Full name"
+          required
+        />
+        <label for="email">Email:</label>
+        <input type="text" name="" id="email" required />
+        <label for="phoneNum">Phone:</label>
+        <input type="text" name="" id="phoneNum" required />
+        <label for="address">Address:</label>
+        <textarea name="" id="address" rows="5" style="resize: none"></textarea>
+
+        <label class="title">Pet Information</label>
+        <label for="petname">Pet Name:</label>
+        <input
+          type="text"
+          name="name"
+          id="petname"
+          placeholder="Pet name"
+          required
+        />
+
+        <label for="species">Species:</label>
+        <select name="" id="species">
+          <option value="">Cat</option>
+          <option value="">Dog</option>
+          <option value="">Bird</option>
+          <option value="">Fish</option>
+          <option value="">Other</option>
+        </select>
+
+        <label for="breed">Breed:</label>
+        <input type="text" name="name" id="breed" required />
+
+        <label for="birth">Birth:</label>
+        <input type="date" name="" id="date" required />
+
+        <label for="">Gender: </label>
+        <select name="gender" id="gender">
+          <option value="">Male</option>
+          <option value="">Female</option>
+        </select>
+
+        <!-- File input field -->
+        <label for="fileInput">Pet Picture:</label>
+        <input
+          type="file"
+          id="fileInput"
+          name="fileInput"
+          accept="image/*"
+        /><!-- "accept" attribute limits file types to images -->
+
+        <label class="checkbox-label">
+          <input type="checkbox" id="terms" required />
+          I have read and agree to the Terms and Conditions</label
+        ><br />
+
+        <button type="submit" value="Submit">Submit</button>
+      </form>
+      <div class="button-container">
+        <a href="../mainPage.html">Back To Home Page</a>
+      </div>
+      <div class="success-message" id="successMessage">
+        <h2>Success!</h2>
+        <p>Your adoption request has been submitted. Please check Your Email</p>
+        <div class="tick">&#10004;</div>
+      </div>
+    </section>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $("#contact-form").submit(function (e) {
+        // Check if any of the required fields are empty
+        if (
+          !$("#name").val() ||
+          !$("#email").val() ||
+          !$("#phoneNum").val() ||
+          !$("#address").val() ||
+          !$("#petname").val() ||
+          !$("#fileInput").val()
+        ) {
+          alert("Please fill in all required fields.");
+          e.preventDefault(); // Prevent the form from submitting
+        }
+        // You can add more specific validation if needed
+        else if (!isValidEmail($("#email").val())) {
+          alert("Please enter a valid email address.");
+          e.preventDefault();
+        } else {
+          document.getElementById("successMessage").style.display = "block";
+          setTimeout(function () {
+            document.getElementById("successMessage").style.display = "none";
+            window.location.href = "../mainPage.html";
+          }, 3500);
+        }
+        // Add more conditions as needed
+      });
+
+      // Function to validate email format
+      function isValidEmail(email) {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+    });
+  </script>
+</html>

@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  font-family: "Poppins", sans-serif;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(76, 242, 101, 0.5),
+      rgba(76, 242, 101, 0.5)
+    ),
+    url(images/BG.png);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+
+h2 {
+  margin-bottom: 40px;
+  font-size: 35px;
+  text-align: center;
+}
+
+form {
+  background-color: #e3e3e3;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+label {
+  font-size: 0.9em;
+  color: #000000;
+  margin-bottom: 10px;
+  display: block;
+  font-size: 16px;
+  margin-left: 2.5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  width: calc(100% - 1px);
+  background-color: #159067;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none;
+  margin-bottom: 20px;
+  height: auto;
+  margin-left: 2px;
+}
+
+input[type="submit"]:hover {
+  background-color: #137056;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.button-container a {
+  padding: 12px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #159067;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+  width: 48%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.button-container a:last-child {
+  margin-right: 0;
+}
+
+.button-container a:hover {
+  background-color: #159067;
+}
+
+.success-message {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #159067;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  text-align: center;
+}
+
+.tick {
+  font-size: 48px;
+  animation: tickAnimation 0.5s ease-in-out;
+}
+
+@keyframes tickAnimation {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 588px) {
+  body {
+    height: 100%;
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: 100%;
+    margin-top: 15px;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  textarea {
+    font-size: 14px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+
+  input[type="submit"] {
+    font-size: 14px;
+    padding: 6px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+
+  .button-container a {
+    padding: 6px;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-left: 15px;
+  }
+
+  .success-message {
+    padding: 10px;
+  }
+
+  .tick {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 357px) {
+  .button-container a {
+    font-size: 12px;
+  }
+  label {
+    font-size: 12px;
+  }
+}

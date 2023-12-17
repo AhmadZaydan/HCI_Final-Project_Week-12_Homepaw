@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
+    <title>Adoption Form</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="adoptionForm">
+        <h2>Adoption Form</h2>
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required /><br />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br />
+
+        <label for="phone">Phone Number:</label>
+        <input
+          type="text"
+          id="phone"
+          name="phone"
+          required
+          pattern="[0-9]+"
+          title="Please enter numbers only"
+        /><br />
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required /><br />
+
+        <label for="pet">Pet Name:</label>
+        <input type="text" id="pet" name="pet" required /><br />
+
+        <label for="pet">Pet Breed:</label>
+        <input type="text" id="Breed" name="Breed" required /><br />
+
+        <label for="reason">Reason for Adoption:</label>
+        <textarea id="reason" name="reason" rows="4" required></textarea><br />
+
+        <label class="checkbox-label">
+          <input type="checkbox" id="terms" required />I have read and agree to
+          the Terms and Conditions </label
+        ><br />
+
+        <input type="submit" value="Submit" />
+      </form>
+
+      <div class="button-container">
+        <a href="search&filter.html">Back</a>
+        <a href="../../mainPage.html">Back To Home Page</a>
+      </div>
+    </div>
+
+    <div class="success-message" id="successMessage">
+      <h2>Success!</h2>
+      <p>Your adoption request has been submitted. Please check Your Email</p>
+      <div class="tick">&#10004;</div>
+    </div>
+
+    <script>
+      document
+        .getElementById("adoptionForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const fullname = document.getElementById("fullname").value;
+          const email = document.getElementById("email").value;
+          const phone = document.getElementById("phone").value;
+          const pet = document.getElementById("pet").value;
+          const date = document.getElementById("date").value;
+          const reason = document.getElementById("reason").value;
+
+          if (
+            !document.getElementById("terms").checked ||
+            !fullname ||
+            !email ||
+            !phone ||
+            !pet ||
+            !date ||
+            !reason
+          ) {
+            alert(
+              "Please fill in all required fields and agree to the Terms and Conditions."
+            );
+          } else {
+            document.getElementById("successMessage").style.display = "block";
+            setTimeout(function () {
+              document.getElementById("successMessage").style.display = "none";
+            }, 3500);
+          }
+        });
+    </script>
+  </body>
+</html>
